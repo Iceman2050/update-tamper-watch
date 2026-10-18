@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "update-tamper-watch"
+version = "0.1.0"
+description = "Poll vendor update manifests and alert on ephemeral tamper-window changes (UNC7017/AOMEI pattern)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["supply-chain", "security", "integrity", "monitoring", "devsecops"]
+
+[project.scripts]
+update-tamper-watch = "update_tamper_watch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["update_tamper_watch*"]
